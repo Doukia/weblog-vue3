@@ -19,11 +19,11 @@
       <ul class="toc">
         <!-- 二级标题 -->
         <li v-for="(h2, index) in titles" :key="index">
-          <span @click="scrollToView(h2.offsetTop)" class="pl-5 hover:text-sky-600" :class="[h2.index == activeHeadingIndex ? 'active py-1 text-sky-600 border-l-2 border-sky-600 font-bold' : 'text-gray-500 font-normal']">{{ h2.text }}</span>
+          <span @click="scrollToView(h2.offsetTop)" class="cursor-pointer pl-5 hover:text-sky-600" :class="[h2.index == activeHeadingIndex ? 'active py-1 text-sky-600 border-l-2 border-sky-600 font-bold' : 'text-gray-500 font-normal']">{{ h2.text }}</span>
           <!-- 三级标题 -->
           <ul v-if="h2.children && h2.children.length > 0">
             <li v-for="(h3, index2) in h2.children" :key="index2">
-              <span @click="scrollToView(h3.offsetTop)" class="pl-10 hover:text-sky-600" :class="[h3.index == activeHeadingIndex ? 'active py-1 text-sky-600 border-l-2 border-sky-600 font-bold' : 'text-gray-500 font-normal']">{{ h3.text }}</span>
+              <span @click="scrollToView(h3.offsetTop)" class="cursor-pointer pl-10 hover:text-sky-600" :class="[h3.index == activeHeadingIndex ? 'active py-1 text-sky-600 border-l-2 border-sky-600 font-bold' : 'text-gray-500 font-normal']">{{ h3.text }}</span>
             </li>
           </ul>
         </li>
